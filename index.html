@@ -1,0 +1,727 @@
+<!DOCTYPE html><html lang="es" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-fixed-dim": "#b5c8df",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#526478",
+        "secondary": "#4e6073",
+        "on-primary-fixed": "#390c00",
+        "surface-container-highest": "#d8e4ee",
+        "surface-variant": "#d8e4ee",
+        "primary-container": "#ca4b17",
+        "on-secondary-fixed": "#091d2e",
+        "background": "#f5faff",
+        "inverse-on-surface": "#e7f2fc",
+        "on-secondary-fixed-variant": "#36485b",
+        "tertiary-fixed": "#dde3eb",
+        "primary-fixed-dim": "#ffb59c",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed": "#161c22",
+        "inverse-primary": "#ffb59c",
+        "on-tertiary-container": "#fcfcff",
+        "surface-container": "#e4eff9",
+        "surface-container-high": "#deeaf3",
+        "outline": "#8d7168",
+        "tertiary": "#565d63",
+        "surface-tint": "#aa3600",
+        "secondary-fixed": "#d1e4fb",
+        "on-surface": "#121d24",
+        "on-secondary": "#ffffff",
+        "on-tertiary-fixed-variant": "#41474e",
+        "surface-bright": "#f5faff",
+        "surface-dim": "#d0dce5",
+        "error-container": "#ffdad6",
+        "tertiary-container": "#6f757c",
+        "error": "#ba1a1a",
+        "on-error-container": "#93000a",
+        "outline-variant": "#e1bfb5",
+        "on-primary-container": "#fffbff",
+        "primary-fixed": "#ffdbcf",
+        "on-surface-variant": "#59413a",
+        "on-primary-fixed-variant": "#822700",
+        "on-background": "#121d24",
+        "on-tertiary": "#ffffff",
+        "inverse-surface": "#273239",
+        "secondary-container": "#cfe2f9",
+        "primary": "#a63500",
+        "surface-container-low": "#e9f5ff",
+        "surface-container-lowest": "#ffffff",
+        "tertiary-fixed-dim": "#c1c7cf",
+        "surface": "#f5faff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter-mobile": "1rem",
+        "space-xl": "2.5rem",
+        "space-2xl": "4rem",
+        "space-md": "1rem",
+        "space-sm": "0.75rem",
+        "space-xs": "0.5rem",
+        "gutter": "1.5rem",
+        "margin": "3rem",
+        "space-2xs": "0.25rem",
+        "margin-mobile": "1.25rem",
+        "space-lg": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-lg": ["Montserrat"],
+        "headline-md": ["Montserrat"],
+        "label-lg": ["Inter"],
+        "label-technical": ["Inter"],
+        "headline-xl": ["Montserrat"],
+        "label-md": ["Inter"],
+        "display-hero": ["Montserrat"],
+        "headline-xl-mobile": ["Montserrat"],
+        "display-hero-mobile": ["Montserrat"],
+        "body-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "body-lg": ["Inter"],
+        "headline-sm": ["Montserrat"]
+      },
+      "fontSize": {
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "label-technical": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+        "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 max-w-[1440px] mx-auto px-margin flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="Andes Summit Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFNa9FnGMv44SOfbD1oWWL1a_hsHmZ1PSxJlXaV6dgxFwmY-W_rC0JM57QIaXg0Q1eUnPGJSXinWLlPyh4XC5USd69pxVY1aVdCFxmzT4DGl3mA_5zgUke1FRU1Xq-i4JmmSIxbwAPYoMTAdgjeT6CmYnIlUCwDBnBGEoamihUnnkBY7VNuiKkXsUZ8znoplOS_3nlWnnpoWflSbgRjYu_XxZOzBpLBytUcwMDOKA"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase leading-none">ANDES SUMMIT</span><span class="font-label-technical text-label-technical text-on-surface-variant tracking-wider uppercase">TECHNICAL GEAR</span></div></div><div class="flex-1 max-w-2xl hidden md:flex flex-col gap-space-2xs"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant pointer-events-none text-[20px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg pl-10 pr-space-md py-space-xs outline-none shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:bg-surface-container transition-all" placeholder="Buscar camperas, botas, mochilas..." type="search"><span class="material-symbols-outlined absolute right-space-sm text-on-surface-variant cursor-pointer text-[18px]">mic</span></div><div class="flex items-center gap-space-xs"><span class="font-label-technical text-label-technical text-on-surface-variant uppercase">EXPLORAR:</span><div class="flex gap-space-2xs"><a class="bg-surface-container text-on-surface-variant hover:text-on-surface font-label-technical text-label-technical px-space-xs py-space-2xs rounded transition-colors" data-path="calzado-de-altura" href="#">VIBRAM ICE</a><a class="bg-surface-container text-on-surface-variant hover:text-on-surface font-label-technical text-label-technical px-space-xs py-space-2xs rounded transition-colors" data-path="equipamiento-tecnico" href="#">850 CUIN</a></div></div></div><div class="flex items-center gap-space-md flex-shrink-0"><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-lowest px-space-xs py-space-2xs rounded-lg cursor-pointer hover:bg-surface-container text-on-surface transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-primary">language</span><span class="font-label-md text-label-md font-semibold text-on-surface">$ ARS</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span></div><a class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span></a><a class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 bg-primary text-on-primary font-label-technical text-label-technical w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span></a><div class="flex items-center gap-space-xs pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden lg:inline-block font-label-md text-label-md text-on-surface">Mi Cuenta</span></div></div></div><nav class="w-full flex items-center gap-space-lg overflow-x-auto py-space-2xs" data-active-classes="text-primary font-bold"><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" data-path="camperas-y-capas" href="#">Camperas &amp; Capas</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" data-path="calzado-de-altura" href="#">Calzado de Altura</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" data-path="mochilas-y-carga" href="#">Mochilas &amp; Carga</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" data-path="equipamiento-tecnico" href="#">Equipamiento Técnico</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" data-path="expediciones" href="#">Expediciones</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" data-path="outlet-sustentable" href="#">Outlet Sustentable</a></nav></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION (Elemento 2 - Máxima Jerarquía Visual) -->
+<section class="relative w-full -mt-28 min-h-[660px] md:min-h-[760px] flex items-end overflow-hidden">
+<!-- Hero Background: Bled under header -->
+<div class="absolute inset-0 w-full h-full">
+<img alt="Montañista en la cumbre nevada de los Andes con bandera y piolet" class="w-full h-full object-cover object-top select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacUL3tYzx0FwBfzorwc7GI4DC93HZ2QmwD4PKjxteho1BJnb6FCrV1OvHpG5ttaS6D0mzulhQ3XzZXSGf0JSXgd9sO2iyocTbD9fSuvIkhYdkDv_yFcEfAuX8ifYmNaOdCBNhR2eRHkUIt-72tGUTqB1YPBfXYhOgYXOFabmFegehZMDOERBIYR0bZrkkq-mUoblJfpG6v2Mw2SfAUWdXL7vvn6yhAHTUM95L-fI">
+<!-- Dark contrast technical gradient scrim for maximum legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/65 to-on-surface/30"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 via-on-surface/50 to-transparent"></div>
+</div>
+<!-- Content container -->
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin pt-36 pb-space-2xl flex flex-col justify-end">
+<div class="max-w-3xl flex flex-col gap-space-md">
+<!-- Prominent Badge -->
+<div class="inline-flex items-center gap-space-xs self-start bg-primary text-on-primary font-label-technical text-label-technical px-space-sm py-space-2xs rounded-lg uppercase tracking-widest shadow-md">
+<span class="material-symbols-outlined text-[16px]">ac_unit</span>
+          EXPEDICIÓN 2026 // CONDICIONES EXTREMAS
+        </div>
+<!-- Main Title -->
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-primary tracking-tight font-extrabold leading-tight">
+          Colección Alta Montaña 2026: Soportá el clima más extremo
+        </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-surface-container max-w-2xl leading-relaxed">
+          Diseñada y testeada en los seismiles de la Cordillera de los Andes. Membranas de 3 capas con máxima transpirabilidad y resistencia certificada a vientos huracanados.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase px-space-lg py-space-sm rounded-lg transition-all duration-200 shadow-md transform hover:-translate-y-0.5" data-path="camperas-y-capas" href="#">
+<span class="">Explorar Colección de Cumbre</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 backdrop-blur-md text-on-primary font-label-lg text-label-lg uppercase px-space-lg py-space-sm rounded-lg transition-all duration-200 shadow-sm" data-path="equipamiento-tecnico" href="#"><span class="material-symbols-outlined text-[18px]">biotech</span><span class="">Ficha de Materiales</span></a>
+</div>
+<!-- Quick Feature Indicators beneath CTA -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-md">
+<div class="flex items-center gap-space-xs text-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[22px]">water_drop</span>
+<span class="font-label-technical text-label-technical tracking-wider uppercase font-semibold">Resistencia 28.000mm H2O</span>
+</div>
+<div class="flex items-center gap-space-xs text-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+<span class="font-label-technical text-label-technical tracking-wider uppercase font-semibold">Costuras 100% Termoselladas</span>
+</div>
+<div class="flex items-center gap-space-xs text-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[22px]">shield</span>
+<span class="font-label-technical text-label-technical tracking-wider uppercase font-semibold">Garantía de Expedición</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. TECHNICAL SPEC HIGHLIGHT & TRUST STRIP -->
+<section class="w-full bg-surface-container-high py-space-md shadow-sm">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center flex-shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase leading-none">Envío Asegurado</span>
+<span class="font-label-technical text-label-technical text-secondary leading-tight mt-1">A Campamentos Base</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center flex-shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">build</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase leading-none">Garantía Vitalicia</span>
+<span class="font-label-technical text-label-technical text-secondary leading-tight mt-1">Reparación en Taller Andes</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center flex-shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">thermostat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase leading-none">Testeo Extremo</span>
+<span class="font-label-technical text-label-technical text-secondary leading-tight mt-1">Validado hasta -30°C</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center flex-shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase leading-none">Guías UIAGM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECCIÓN FILTROS RÁPIDOS & CATEGORÍAS TÉCNICAS -->
+<section class="w-full bg-surface pt-space-xl pb-space-sm">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<span class="font-label-technical text-label-technical text-secondary tracking-widest uppercase font-bold">FILTROS RÁPIDOS POR DISCIPLINA</span>
+</div>
+<!-- Pill Selectors with micro-interaction state -->
+<div class="flex items-center gap-space-2xs overflow-x-auto pb-space-2xs select-none">
+<button class="category-pill active bg-inverse-surface text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap shadow-sm" type="button">
+            Todos los lanzamientos
+          </button>
+<button class="category-pill bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap" type="button">
+            Tercera Capa (Hardshell)
+          </button>
+<button class="category-pill bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap" type="button">
+            Pluma &amp; Térmicas
+          </button>
+<button class="category-pill bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap" type="button">
+            Calzado Técnico
+          </button>
+<button class="category-pill bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap" type="button">
+            Mochilas 45L+
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. GRILLA DE PRODUCTOS - "NOVEDADES DE LA SEMANA" (4 Columnas) -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-2xs text-primary font-label-technical text-label-technical tracking-wider uppercase font-bold">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            ACTUALIZACIÓN SEMANAL DE STOCK TÉCNICO
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+            Novedades de la Semana
+          </h2>
+<p class="font-body-md text-body-md text-secondary mt-1">
+            Equipamiento recién llegado para tus ascensos y travesías glaciares.
+          </p>
+</div>
+<a class="inline-flex items-center gap-space-2xs text-primary hover:text-primary-container font-label-lg text-label-lg font-bold uppercase transition-colors group" href="#">
+<span class="">Ver todos (24)</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- 4-Column Responsive Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Card 1: Hardshell Jacket -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Technical mountaineering hardshell orange jacket with Gore-Tex fabric, helmet-compatible storm hood, water-resistant zippers, clean studio lighting on ice gray minimal background, high altitude gear catalog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsUf6-pZJW6br4xR8fI9I3cwUBXm6uPFNgxQHGAwn9jF881qmx2kXwjBffmR11afd9rqTugfpYbfYCKQbD3AA9bOl1Q54avpiz1x155pIEZ1EO_TnNVaM-vOnXF-nV3rf2bInLWArw0tkKrPJqfKTrM1A5ic-vK4VF_Oa-5Tro5c28eEg2i48ZCy-7198Id2Ck1rNS6yGChPNCRf1Qt10v0-ydLE_JaxhwbL-ZbVs">
+<!-- Badges top left -->
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+<span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">Gore-Tex Pro</span>
+</div>
+<!-- Favorite button top right -->
+<button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<!-- Technical Attribute Pills -->
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">28.000mm H2O</span>
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Cortaviento</span>
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">440g</span>
+</div>
+<!-- Product Technical Name -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+                Campera Impermeable G-XCR Summit
+              </h3>
+<!-- Rating -->
+<div class="flex items-center gap-space-2xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-technical text-label-technical text-secondary font-semibold">4.9 (48 reseñas)</span>
+</div>
+</div>
+<!-- Price & Buy CTA -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$ 489.900 ARS</span>
+<p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 81.650</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span class="">Ver Detalles Técnicos</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Technical Mountaineering Boots -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Expedition alpine mountaineering double boot for high altitude with integrated gaiter, Vibram arctic grip crampon-compatible sole, high contrast technical photography, gray alpine backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKB933nbO0uz1lsybI29Zz1APtslmmvox-bl6uOtxXgSc7cCJeN58wri4vuBu7UcS4mV0p1ycqr1CVQMmIj8zSmEOD8auCHVLoKAS0u_Lv8VCCH9vUrRG4AmJp31J-1i8bAY5_0ijbRUogLBmTgIhji8WUndFoOKzsLqlq0ex-oGzaVaT4b3NLAEUY2PbveSCzG4c_gIWRp5dcE1pOIb1VYyFI8eH8pFuxYzx7feA">
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+<span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">Cramponable</span>
+</div>
+<button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Vibram Arctic Grip</span>
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">-30°C Confort</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+                Bota Alta Montaña Fitz Roy GTX 6000
+              </h3>
+<div class="flex items-center gap-space-2xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-technical text-label-technical text-secondary font-semibold">5.0 (32 reseñas)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$ 612.500 ARS</span>
+<p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 102.083</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span class="">Ver Detalles Técnicos</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Alpine Expedition Backpack -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="75 liter technical mountaineering backpack made from Cordura ripstop textile with ice axe attachments, ski carry loops, roll top closure, clean studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVy45ZwxkVuKOuzQ8iJNHfAMsuA2dSXLRio_WNtuj1HipnbrVukAkVZHo0oN_Q4fLNZaxkwlPeJihR_CA-2zmuXYJ14CQA7gm2mMMTK9oBTquqPYPWGwruqNJk9EZpMI8nSKmD4Yj5GO-RAy2zPB9Zk9Xuz3N17rmiYJjmB4o8HEVZ5B7ct1dtrgO2IjvZzHfBdZatPAVN8Vl972_DGTyLQvCcbt8TkHh3h7pNtds">
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+<span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">Cordura Ripstop</span>
+</div>
+<button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Capacidad 75L</span>
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">1.350g Tara</span>
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Carga 32kg</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+                Mochila de Carga Aconcagua Pro 75L
+              </h3>
+<div class="flex items-center gap-space-2xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-technical text-label-technical text-secondary font-semibold">4.8 (64 reseñas)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$ 345.000 ARS</span>
+<p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 57.500</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span class="">Ver Detalles Técnicos</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Down Thermal Anorak -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Technical ultralight alpine 850 down fill jacket in slate gray and burnt orange accents, insulated baffle construction for subzero expeditions, white minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARnaTYG5CYydEwzOtwHOiMNwpMw78GBrzpOnv0jvQND_EzSPWZmtbSw5jIcAZEvT-b8nTkn2rPHWwWP2R7yS0DzBdftQ26YmmwQG2L4uuuHE5taNjIs8IkS6RpdHFOq47d3PDmmduC73AaNr0SWUsFhnVTxHidge2OPW5BPLhCgmV6JO0sVGc1S63ruzwbUy__MGmVO4JrCnfo9HlVcwqa7tWcLlQgLOdAr1id-Wk">
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+<span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">850 Fill Power</span>
+</div>
+<button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex flex-wrap gap-1">
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Pluma Hidrofóbica</span>
+<span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Ultraliviano 380g</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+                Anorak Térmico Pluma Cerro Torre 850
+              </h3>
+<div class="flex items-center gap-space-2xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-technical text-label-technical text-secondary font-semibold">4.9 (19 reseñas)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$ 398.200 ARS</span>
+<p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 66.366</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span class="">Ver Detalles Técnicos</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5: Expedition Mittens -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+  <div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+    <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Heavy mountaineering expedition mittens with Gore-Tex waterproof breathable shell and Primaloft Gold down blend insulation in volcanic orange and dark slate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKB933nbO0uz1lsybI29Zz1APtslmmvox-bl6uOtxXgSc7cCJeN58wri4vuBu7UcS4mV0p1ycqr1CVQMmIj8zSmEOD8auCHVLoKAS0u_Lv8VCCH9vUrRG4AmJp31J-1i8bAY5_0ijbRUogLBmTgIhji8WUndFoOKzsLqlq0ex-oGzaVaT4b3NLAEUY2PbveSCzG4c_gIWRp5dcE1pOIb1VYyFI8eH8pFuxYzx7feA">
+    <div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+      <span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+      <span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">Primaloft 8000m</span>
+    </div>
+    <button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+    <div class="flex flex-col gap-space-2xs">
+      <div class="flex flex-wrap gap-1">
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Confort -35°C</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Grip Cuero Kevlar</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">260g</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+        Mitones de Expedición 8000m Pro
+      </h3>
+      <div class="flex items-center gap-space-2xs">
+        <div class="flex text-primary">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <span class="font-label-technical text-label-technical text-secondary font-semibold">4.9 (27 reseñas)</span>
+      </div>
+    </div>
+    <div class="flex flex-col gap-space-xs pt-space-xs">
+      <div>
+        <span class="font-headline-md text-headline-md font-bold text-on-surface">$ 185.000 ARS</span>
+        <p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 30.833</p>
+      </div>
+      <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+        <span class="material-symbols-outlined text-[18px]">visibility</span>
+        <span class="">Ver Detalles Técnicos</span>
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 6: Hardshell Mountaineering Pants -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+  <div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+    <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Alpine hardshell climbing mountaineering trousers pants in dark anthracite with reinforced Cordura instep patches and full length side zips on light gray studio set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsUf6-pZJW6br4xR8fI9I3cwUBXm6uPFNgxQHGAwn9jF881qmx2kXwjBffmR11afd9rqTugfpYbfYCKQbD3AA9bOl1Q54avpiz1x155pIEZ1EO_TnNVaM-vOnXF-nV3rf2bInLWArw0tkKrPJqfKTrM1A5ic-vK4VF_Oa-5Tro5c28eEg2i48ZCy-7198Id2Ck1rNS6yGChPNCRf1Qt10v0-ydLE_JaxhwbL-ZbVs">
+    <div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+      <span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+      <span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">Gore-Tex Pro 3L</span>
+    </div>
+    <button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+    <div class="flex flex-col gap-space-2xs">
+      <div class="flex flex-wrap gap-1">
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">28.000mm H2O</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Cierres YKK Aquaguard</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Refuerzo Crampón</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+        Pantalón Técnico Hardshell Aconcagua Pro
+      </h3>
+      <div class="flex items-center gap-space-2xs">
+        <div class="flex text-primary">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+        </div>
+        <span class="font-label-technical text-label-technical text-secondary font-semibold">4.8 (41 reseñas)</span>
+      </div>
+    </div>
+    <div class="flex flex-col gap-space-xs pt-space-xs">
+      <div>
+        <span class="font-headline-md text-headline-md font-bold text-on-surface">$ 420.000 ARS</span>
+        <p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 70.000</p>
+      </div>
+      <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+        <span class="material-symbols-outlined text-[18px]">visibility</span>
+        <span class="">Ver Detalles Técnicos</span>
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 7: 4-Season Expedition Tent -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+  <div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+    <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Geodesic expedition four season mountaineering tent in expedition orange and silver gray pitched, snow flaps and DAC featherlite poles, clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVy45ZwxkVuKOuzQ8iJNHfAMsuA2dSXLRio_WNtuj1HipnbrVukAkVZHo0oN_Q4fLNZaxkwlPeJihR_CA-2zmuXYJ14CQA7gm2mMMTK9oBTquqPYPWGwruqNJk9EZpMI8nSKmD4Yj5GO-RAy2zPB9Zk9Xuz3N17rmiYJjmB4o8HEVZ5B7ct1dtrgO2IjvZzHfBdZatPAVN8Vl972_DGTyLQvCcbt8TkHh3h7pNtds">
+    <div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+      <span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+      <span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">4 Estaciones</span>
+    </div>
+    <button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+    <div class="flex flex-col gap-space-2xs">
+      <div class="flex flex-wrap gap-1">
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Viento 140 km/h</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Varillas DAC Al 7001</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">3 Personas</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+        Carpa 4 Estaciones Fitz Roy Dome 3P
+      </h3>
+      <div class="flex items-center gap-space-2xs">
+        <div class="flex text-primary">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <span class="font-label-technical text-label-technical text-secondary font-semibold">5.0 (18 reseñas)</span>
+      </div>
+    </div>
+    <div class="flex flex-col gap-space-xs pt-space-xs">
+      <div>
+        <span class="font-headline-md text-headline-md font-bold text-on-surface">$ 890.000 ARS</span>
+        <p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 148.333</p>
+      </div>
+      <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+        <span class="material-symbols-outlined text-[18px]">visibility</span>
+        <span class="">Ver Detalles Técnicos</span>
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Card 8: Mountaineering Crampons -->
+<article class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+  <div class="relative bg-surface-container-low aspect-square w-full overflow-hidden flex items-center justify-center p-space-md">
+    <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="Automated 12-point technical alpine mountaineering crampons made of forged chrome-moly steel and titanium alloy with antibott plates on neutral studio surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKB933nbO0uz1lsybI29Zz1APtslmmvox-bl6uOtxXgSc7cCJeN58wri4vuBu7UcS4mV0p1ycqr1CVQMmIj8zSmEOD8auCHVLoKAS0u_Lv8VCCH9vUrRG4AmJp31J-1i8bAY5_0ijbRUogLBmTgIhji8WUndFoOKzsLqlq0ex-oGzaVaT4b3NLAEUY2PbveSCzG4c_gIWRp5dcE1pOIb1VYyFI8eH8pFuxYzx7feA">
+    <div class="absolute top-space-sm left-space-sm flex flex-col gap-1 items-start">
+      <span class="bg-primary text-on-primary font-label-technical text-label-technical font-bold px-2 py-0.5 rounded-lg uppercase shadow-sm">Nuevo</span>
+      <span class="bg-inverse-surface text-on-primary font-label-technical text-label-technical px-2 py-0.5 rounded-lg uppercase">Acero NiCrMo</span>
+    </div>
+    <button aria-label="Añadir a favoritos" class="absolute top-space-sm right-space-sm w-9 h-9 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-center text-secondary hover:text-primary transition-colors shadow-sm" type="button">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+    <div class="flex flex-col gap-space-2xs">
+      <div class="flex flex-wrap gap-1">
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">12 Puntas Forjadas</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">Fijación Automática</span>
+        <span class="bg-surface-container-high text-on-surface font-label-technical text-label-technical px-1.5 py-0.5 rounded">890g Par</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight group-hover:text-primary transition-colors">
+        Crampones Técnicos Alpinismo Titanio
+      </h3>
+      <div class="flex items-center gap-space-2xs">
+        <div class="flex text-primary">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <span class="font-label-technical text-label-technical text-secondary font-semibold">4.9 (53 reseñas)</span>
+      </div>
+    </div>
+    <div class="flex flex-col gap-space-xs pt-space-xs">
+      <div>
+        <span class="font-headline-md text-headline-md font-bold text-on-surface">$ 248.000 ARS</span>
+        <p class="font-label-technical text-label-technical text-secondary font-medium">6 cuotas sin interés de $ 41.333</p>
+      </div>
+      <button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg uppercase py-2.5 px-space-sm rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+        <span class="material-symbols-outlined text-[18px]">visibility</span>
+        <span class="">Ver Detalles Técnicos</span>
+      </button>
+    </div>
+  </div>
+</article></div>
+</div>
+</section>
+<!-- 5. SISTEMA DE CAPAS ANDINO (In-page Interactive Teaser Section) -->
+
+<!-- 6. EXPEDITION REPORTAGE SPLIT BANNER -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-xl">
+<div class="lg:col-span-7 p-space-lg md:p-space-xl flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-technical text-label-technical px-space-xs py-space-2xs rounded self-start uppercase font-bold">
+              EXPEDICIÓN ANDINA // OJO DEL SALADO 6.893M
+            </div>
+<h3 class="font-headline-xl text-headline-xl font-bold tracking-tight text-surface-container-lowest">
+              “A 6.500 metros no hay lugar para segundas oportunidades en el equipo.”
+            </h3>
+<p class="font-body-md text-body-md text-surface-container-highest max-w-xl">
+              Nuestros atletas probaron la serie Summit 2026 durante 18 días en el desierto de altura de Atacama y la Puna catamarqueña. Cada cremallera, costura y cuello de tormenta fue refinado para maniobrar con guantes de expedición gruesos.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-lg pt-space-sm">
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-primary">6.893m</div>
+<div class="font-label-technical text-label-technical text-surface-container-highest uppercase">Altitud Máxima Testeada</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-primary">-34°C</div>
+<div class="font-label-technical text-label-technical text-surface-container-highest uppercase">Sensación Térmica Mínima</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-primary">120 km/h</div>
+<div class="font-label-technical text-label-technical text-surface-container-highest uppercase">Ráfagas de Viento Registradas</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative min-h-[320px] lg:min-h-full">
+<img class="w-full h-full object-cover" data-alt="Mountaineer standing on an icy knife-edge ridge with crampons and ice axe overlooking jagged granite peaks in extreme Patagonia weather, sunset golden rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6hkYgOdWRXiyuSjtSXiXu2-AW6GC6luaakOu6ro3od43x_a1gPotept4aIH_NZOposn-abBWIXd7AzyrrQ1iDhL6YtU6opwCCGHk41oRsWMniCMB8eigRrk03TucHffUawF2mu3kbkOegcVABpVDLVrA2QQUG6cUti6LqR6iBCwJ0MQD_vKqrDB8L7ZyQXbRJDr50KjeRBSsdypLBcWIWgiaFHMntgiA38wG1n4">
+<div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-inverse-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. BANNER / BOTÓN FLOTANTE "ASISTENTE DE CAPAS" (Elemento 4) -->
+<aside class="fixed bottom-6 right-6 z-40 max-w-sm transition-all duration-300 transform translate-y-0" id="floating-layer-assistant"><div class="relative bg-inverse-surface text-inverse-on-surface rounded-lg p-space-sm shadow-2xl flex items-center gap-space-sm cursor-pointer hover:bg-on-surface transition-all group">
+  <!-- Pulsing Live Support Dot -->
+  <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary"></span>
+  </span>
+  <!-- Support / UIAGM Guide Icon Emblem -->
+  <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+    <span class="material-symbols-outlined text-[22px]">support_agent</span>
+  </div>
+  <!-- Copy -->
+  <div class="flex flex-col min-w-0 pr-space-xs">
+    <span class="font-label-technical text-label-technical text-primary uppercase font-bold tracking-wider">SOPORTE TÉCNICO EN VIVO</span>
+    <p class="font-body-sm text-body-sm font-medium text-inverse-on-surface leading-tight truncate">
+      Consultar a Guía UIAGM
+    </p>
+  </div>
+  <!-- Action Button / Chat Icon -->
+  <div class="flex-shrink-0 bg-surface-container-highest/20 group-hover:bg-primary group-hover:text-on-primary text-inverse-on-surface rounded p-1.5 transition-colors">
+    <span class="material-symbols-outlined text-[18px]">chat</span>
+  </div>
+</div></aside>
+</div>
+<script>
+  // Simple micro-interaction for Temperature Range Slider in Layer section
+  const tempSlider = document.getElementById('temp-slider');
+  const tempDisplay = document.getElementById('temp-display');
+  if (tempSlider && tempDisplay) {
+    tempSlider.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      if (val <= -20) {
+        tempDisplay.textContent = `${val}°C Glaciar Extremo`;
+      } else if (val <= -10) {
+        tempDisplay.textContent = `${val}°C Alta Cumbre`;
+      } else if (val <= 0) {
+        tempDisplay.textContent = `${val}°C Ventisca Alpina`;
+      } else {
+        tempDisplay.textContent = `+${val}°C Valle y Aproximación`;
+      }
+    });
+  }
+
+  // Quick filter pills visual toggle
+  const pills = document.querySelectorAll('.category-pill');
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pills.forEach((p) => {
+        p.classList.remove('bg-inverse-surface', 'text-on-primary', 'shadow-sm');
+        p.classList.add('bg-surface-container-high', 'text-on-surface');
+      });
+      pill.classList.remove('bg-surface-container-high', 'text-on-surface');
+      pill.classList.add('bg-inverse-surface', 'text-on-primary', 'shadow-sm');
+    });
+  });
+
+  // Floating Layer Assistant click scrolls to Capas section
+  const floatingWidget = document.getElementById('floating-layer-assistant');
+  if (floatingWidget) {
+    floatingWidget.addEventListener('click', () => {
+      const target = document.getElementById('capas-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+</script></main><footer class="w-full bg-inverse-surface text-inverse-on-surface py-space-2xl"><div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-space-2xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-wider uppercase text-inverse-on-surface">ANDES SUMMIT</span><span class="bg-primary text-on-primary font-label-technical text-label-technical px-space-xs py-space-2xs rounded">LAB</span></div><p class="font-body-sm text-body-sm text-surface-container-highest max-w-sm">Ingeniería textil para condiciones límite en los Andes australes. Desarrollado y probado a más de 6.000 metros de altura.</p><div class="flex flex-col gap-space-xs mt-space-sm"><span class="font-label-md text-label-md font-semibold text-inverse-on-surface uppercase tracking-wider">Unite a la comunidad de cumbre</span><span class="font-body-sm text-body-sm text-surface-container-highest">Alertas de clima alpino, reportes nivológicos y lanzamientos técnicos anticipados.</span><div class="flex items-center mt-space-xs"><input class="bg-surface-container text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded-l outline-none w-full max-w-xs placeholder-tertiary" placeholder="correo@expedicion.com" type="email"><button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-r transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">arrow_forward</span></button></div></div></div><div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-space-lg"><div class="flex flex-col gap-space-sm"><span class="font-label-technical text-label-technical text-inverse-on-surface uppercase tracking-widest font-bold">Categorías</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Camperas &amp; Anoraks</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Calzado Alpino</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Mochilas Técnicas</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Accesorios &amp; Guantes</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Capas Térmicas</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-technical text-label-technical text-inverse-on-surface uppercase tracking-widest font-bold">Sustentabilidad</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Materiales Reciclados</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Reparación Vitalicia</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Huella de Carbono</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Certificación Bluesign®</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-technical text-label-technical text-inverse-on-surface uppercase tracking-widest font-bold">Soporte</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Guía de Talles</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Estado de Envío</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Garantía 30 días</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Centros de Testeo</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-technical text-label-technical text-inverse-on-surface uppercase tracking-widest font-bold">Nosotros</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Manifiesto Cordillera</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Atletas del Equipo</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Empleos de Montaña</li><li class="hover:text-inverse-on-surface cursor-pointer transition-colors">Contacto &amp; Refugios</li></ul></div></div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-md pt-space-md"><div class="flex items-center gap-space-md text-surface-container-highest"><a class="hover:text-inverse-on-surface transition-colors flex items-center gap-space-2xs font-label-technical text-label-technical" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span>INSTAGRAM</a><a class="hover:text-inverse-on-surface transition-colors flex items-center gap-space-2xs font-label-technical text-label-technical" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span>YOUTUBE</a><a class="hover:text-inverse-on-surface transition-colors flex items-center gap-space-2xs font-label-technical text-label-technical" href="#"><span class="material-symbols-outlined text-[18px]">directions_run</span>STRAVA</a><a class="hover:text-inverse-on-surface transition-colors flex items-center gap-space-2xs font-label-technical text-label-technical" href="#"><span class="material-symbols-outlined text-[18px]">forum</span>COMUNIDAD</a></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-surface-container-highest">credit_card</span><span class="material-symbols-outlined text-[20px] text-surface-container-highest">contactless</span><span class="material-symbols-outlined text-[20px] text-surface-container-highest">security</span><span class="font-label-technical text-label-technical text-surface-container-highest uppercase">PAGOS SEGUROS EN ARS</span></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-surface-container-highest font-body-sm text-body-sm"><p class="">© 2025 ANDES SUMMIT TECHNICAL GEAR. Todos los derechos reservados.</p><p class="font-label-technical text-label-technical tracking-wider text-surface-container-highest">COMPROMISO DE PROTECCIÓN DE GLACIARES Y PARQUES NACIONALES ANDINOS</p></div></div></footer>
+
+</body></html>
